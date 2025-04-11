@@ -1,6 +1,6 @@
 # How to Configure GraphQL in Angular: For Public and Private APIs
 
-[![Article on Dev.to](https://img.shields.io/badge/Read%20Article-Dev.to-black)](https://dev.to/your-username/your-article-slug)
+[![Article on Dev.to](https://img.shields.io/badge/Read%20Article-Dev.to-black)](https://dev.to/kingsley/how-to-configure-graphql-in-angular-for-public-and-private-apis-3fc7)
 
 This demo showcases GraphQL implementation in Angular with both public and authenticated API endpoints:
 
@@ -61,4 +61,4 @@ This demo showcases GraphQL implementation in Angular with both public and authe
 
 For detailed implementation explanations, read the companion article:
 
-[How to Configure GraphQL in Angular: For Public And Private APIs](https://dev.to/your-username/your-article-slug)
+[How to Configure GraphQL in Angular: For Public And Private APIs](https://dev.to/kingsley/how-to-configure-graphql-in-angular-for-public-and-private-apis-3fc7)
