@@ -1,0 +1,11 @@
+@if (data; as countries) {
+<div class="grid">
+  @for (country of countries; track country.name) {
+  <div class="card">
+    <h3>{{ country.name }}</h3>
+    <p>Currency: {{ country.currency }}</p>
+    <p>Capital: {{ country.capital || "N/A" }}</p>
+  </div>
+  }
+</div>
+}
