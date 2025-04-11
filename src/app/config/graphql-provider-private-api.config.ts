@@ -48,8 +48,14 @@ export const apolloOptionsFactory = () => {
     link,
     cache: new InMemoryCache(),
     defaultOptions: {
-      watchQuery: { fetchPolicy: 'cache-first', errorPolicy: 'all' },
-      query: { fetchPolicy: 'cache-first', errorPolicy: 'all' },
+      watchQuery: {
+        fetchPolicy: 'network-only',
+        errorPolicy: 'all',
+      },
+      query: {
+        fetchPolicy: 'network-only',
+        errorPolicy: 'all',
+      },
     },
   };
 };
