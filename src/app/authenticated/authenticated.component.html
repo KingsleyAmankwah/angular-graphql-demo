@@ -1,0 +1,42 @@
+@if (loading) {
+<p>Loading GitHub profile...</p>
+
+} @if (error) {
+<p class="error">Sorry something went wrong</p>
+} @if (userData) {
+
+<div class="profile-header">
+  <img [src]="userData.avatarUrl" width="100px" alt="Avatar" class="avatar" />
+  <h2>{{ userData.name }}</h2>
+  <p>{{ userData.login }}</p>
+  <p>{{ userData.bio }}</p>
+  <p *ngIf="userData.company">Works at {{ userData.company }}</p>
+  <p *ngIf="userData.location">📍 {{ userData.location }}</p>
+  <p *ngIf="userData.websiteUrl">
+    <a [href]="userData.websiteUrl" target="_blank">{{
+      userData.websiteUrl
+    }}</a>
+  </p>
+</div>
+
+<h3>Recent Repositories</h3>
+<div class="repositories">
+  <div class="repo-card">
+    @for (repo of userData.repositories.nodes; track repo.name) {
+    <h4>
+      <a [href]="repo.url" target="_blank">{{ repo.name }}</a>
+      @if (repo.isPrivate) {
+      <span class="private-badge">Private</span>
+      }
+    </h4>
+
+    @if (repo.description) {
+    <p>{{ repo.description }}</p>
+    }
+    <div class="repo-meta">
+      <span>Updated {{ repo.updatedAt | date }}</span>
+    </div>
+    }
+  </div>
+</div>
+}
